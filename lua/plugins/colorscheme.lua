@@ -1,6 +1,6 @@
 return {
-	"rebelot/kanagawa.nvim",
-	config = function()
-		require("kanagawa").load("wave")
-	end
+    "rebelot/kanagawa.nvim",
+    "catppuccin/nvim",
+    "ayu-theme/ayu-vim",
+    priority = 1000,
 }
