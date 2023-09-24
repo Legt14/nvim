@@ -1,4 +1,5 @@
 return {
+    enabled = true,
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = {
