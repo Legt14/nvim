@@ -3,7 +3,6 @@ return {
     build = ":TSUpdate",
     event = "VeryLazy",
     main = "nvim-treesitter.configs",
-    config = true,
     opts = {
         ensure_installed = {
             "typescript",
@@ -14,7 +13,7 @@ return {
             "css",
             "python",
             "tsx",
-            "html"
+            "html",
         },
         hightlight = {
             enable = true,
@@ -23,7 +22,12 @@ return {
             enable = true,
         },
         -- additional_vim_regex_highlighting = true,
-        sync_install = false,
-        auto_install = false
+        sync_install = true,
+        auto_install = true,
+
+        autotag = {
+            enable = true
+        }
+
     },
 }

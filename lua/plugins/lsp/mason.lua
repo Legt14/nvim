@@ -1,7 +1,8 @@
 return {
     "williamboman/mason.nvim",
     dependencies = {
-        "williamboman/mason-lspconfig.nvim"
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
     },
     keys = {
         { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" }
@@ -9,8 +10,6 @@ return {
     config = function()
         local mason = require "mason"
         local mason_lspconfig = require "mason-lspconfig"
-        local lsp_config = require "lspconfig"
-        local lsp_zero = require "lsp-zero"
         mason.setup({
             ui = {
                 icons = {
@@ -22,29 +21,19 @@ return {
         })
 
         mason_lspconfig.setup({
-            ensure_installed = {},
-            handlers = {
-                lsp_zero.default_setup,
-                lua_ls = function()
-                    -- (Optional) Configure lua language server for neovim
-                    local lua_opts = lsp_zero.nvim_lua_ls()
-                    lsp_config.lua_ls.setup(lua_opts)
-                end,
-            }
+            ensure_install = {
+                "tsserve",
+                "html",
+                "cssls",
+                "tailwindcss",
+                "astro",
+                "lua_ls",
+                "emmet_ls",
+                "pyright",
+                "astro",
+                "eslint"
+            },
+            automatic_installation = true,
         })
-        -- mason_lspconfig.setup({
-        --     ensure_install = {
-        --         "tsserve",
-        --         "html",
-        --         "cssls",
-        --         "tailwindcss",
-        --         "astro",
-        --         "lua_ls",
-        --         "emmet_ls",
-        --         "pyright",
-        --         "astro"
-        --     },
-        --     automatic_installation = true,
-        -- })
     end
 }

@@ -5,5 +5,6 @@ return {
     "EdenEast/nightfox.nvim",
     "folke/tokyonight.nvim",
     "morhetz/gruvbox",
+    'navarasu/onedark.nvim',
     priority = 1000,
 }

@@ -69,6 +69,20 @@ require("themery").setup({
             name = "Gruvbox",
             colorscheme = "gruvbox",
         },
+        {
+            name = "Onedark",
+            colorscheme = "onedark",
+        },
+        {
+            name = "Onedark Dark",
+            colorscheme = "onedark",
+            style = "darker"
+        },
+        {
+            name = "Onedark cool",
+            colorscheme = "onedark",
+            style = "cool"
+        },
     },
     livePreview = true,
 })
