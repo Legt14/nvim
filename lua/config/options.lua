@@ -15,4 +15,3 @@ opt.cursorline = true
 opt.cursorcolumn = true
 opt.showmatch = true
 opt.matchtime = 3
-opt.swapfile = false
