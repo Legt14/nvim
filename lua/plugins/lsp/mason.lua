@@ -32,7 +32,8 @@ return {
                 "emmet_ls",
                 "pyright",
                 "astro",
-                "eslint"
+                "eslint",
+                'quick_lint_js'
             },
             automatic_installation = true,
         })

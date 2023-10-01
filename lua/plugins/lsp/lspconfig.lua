@@ -48,6 +48,20 @@ return {
 
         -- Enable the following language servers
         -- local servers = { 'html', 'tailwindcss', 'eslint', 'tsserver', 'emmet_ls', 'astro', 'pyrght' }
+        --
+        lspconfig.quick_lint_js.setup({
+            on_attach = on_attach,
+            filetypes = {
+                "svelte",
+                "javascript",
+                "javascriptreact",
+                "pug",
+                "vue",
+                "astro",
+                "jsx",
+            },
+            capabilities = capabilities,
+        })
 
         lspconfig.pyright.setup({
             on_attach = on_attach,
@@ -88,19 +102,19 @@ return {
             },
         })
 
-        lspconfig.eslint.setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-            filetypes = {
-                "svelte",
-                "javascript",
-                "javascriptreact",
-                "pug",
-                "vue",
-                "astro",
-                "jsx",
-            },
-        })
+        -- lspconfig.eslint.setup({
+        --     on_attach = on_attach,
+        --     capabilities = capabilities,
+        --     filetypes = {
+        --         "svelte",
+        --         "javascript",
+        --         "javascriptreact",
+        --         "pug",
+        --         "vue",
+        --         "astro",
+        --         "jsx",
+        --     },
+        -- })
 
         lspconfig.emmet_ls.setup({
             on_attach = on_attach,
