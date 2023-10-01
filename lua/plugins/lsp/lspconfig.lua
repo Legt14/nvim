@@ -96,13 +96,12 @@ return {
                 "javascript",
                 "javascriptreact",
                 "pug",
-                "typescriptreact",
                 "vue",
                 "astro",
-                "tsx",
                 "jsx",
             },
         })
+
         lspconfig.emmet_ls.setup({
             on_attach = on_attach,
             capabilities = capabilities,
@@ -115,8 +114,6 @@ return {
                 "typescriptreact",
                 "vue",
                 "astro",
-                "tsx",
-                "jsx",
             },
         })
 
@@ -129,21 +126,12 @@ return {
             on_attach = on_attach,
             capabilities = capabilities,
             filetypes = {
-                "css",
-                "eruby",
-                "html",
-                "javascript",
-                "javascriptreact",
-                "less",
-                "sass",
-                "scss",
                 "svelte",
                 "pug",
                 "typescriptreact",
+                "typescript",
                 "vue",
                 "astro",
-                "tsx",
-                "jsx",
             },
             settings = {
                 typescript = {
@@ -155,17 +143,7 @@ return {
                         includeInlayPropertyDeclarationTypeHints = true,
                         includeInlayFunctionLikeReturnTypeHints = true,
                         includeInlayEnumMemberValueHints = true,
-                    },
-                },
-                javascript = {
-                    inlayHints = {
-                        includeInlayParameterNameHints = "all",
-                        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                        includeInlayFunctionParameterTypeHints = true,
-                        includeInlayVariableTypeHints = true,
-                        includeInlayPropertyDeclarationTypeHints = true,
-                        includeInlayFunctionLikeReturnTypeHints = true,
-                        includeInlayEnumMemberValueHints = true,
+                        includeCompletionsForModuleExports = false
                     },
                 },
             },

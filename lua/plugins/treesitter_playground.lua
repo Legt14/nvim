@@ -1,5 +1,7 @@
 return {
     'nvim-treesitter/playground',
+    event = "VeryLazy",
+    lazy = true,
     config = function()
         local treesitter_config = require "nvim-treesitter.configs"
         treesitter_config.setup({

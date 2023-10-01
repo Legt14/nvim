@@ -37,5 +37,4 @@ return {
             vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
         end
     end,
-
 }

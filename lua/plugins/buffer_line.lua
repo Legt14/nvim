@@ -1,8 +1,14 @@
 return {
     "akinsho/bufferline.nvim",
     version = "*",
-    enabled = false,
+    enabled = true,
     dependencies = "nvim-tree/nvim-web-devicons",
+    keys = {
+        {'<leader>bn', '<cmd>bnext<cr>', desc = "Next buffer"},
+        {'<leader>bp', '<cmd>bprevious<cr>', desc = "Previous buffer"},
+        {'<leader>bd', '<cmd>bdelete<cr>', desc = "Delete buffer"},
+        {'<leader>be', '<cmd>enew<cr>', desc = "Create new buffer"},
+    },
     config = function()
         local bufferline = require("bufferline")
         bufferline.setup({

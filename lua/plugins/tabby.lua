@@ -1,4 +1,5 @@
 return {
+    enabled = false,
     "nanozuki/tabby.nvim",
     opts = {
         vim.api.nvim_set_keymap("n", "<leader>ta", ":$tabnew<CR>", { noremap = true }),

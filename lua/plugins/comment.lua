@@ -4,7 +4,7 @@ return {
         -- add any options here
     },
     keys = { { "gcc", desc = "Comment current line" }, { "gc", mode = "v", desc = "Comment selected text" } },
-    lazy = false,
+    lazy = true,
     config = true
 }
 

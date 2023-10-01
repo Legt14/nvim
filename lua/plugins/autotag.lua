@@ -3,7 +3,7 @@ return {
     config = function ()
         local autotag = require "nvim-ts-autotag"
         autotag.setup({
-            filetypes = { "html" , "xml", "jsx", "tsx"},
+            filetypes = { "html" , "xml", "javascriptreact", "typescriptreact"},
         })
     end,
 
