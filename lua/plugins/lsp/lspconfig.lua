@@ -172,5 +172,14 @@ return {
                 },
             },
         })
+
+        lspconfig.rnix.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            filetype = {
+                "nix"
+            },
+            cmd = {'rnix-lsp'}
+        })
     end,
 }
