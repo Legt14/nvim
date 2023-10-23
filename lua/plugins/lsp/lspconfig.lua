@@ -51,20 +51,20 @@ return {
 		--
 		--
 
-		lspconfig.hls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			cmd = { "haskell-language-server-wrapper", "--lsp" },
-			filetypes = { "haskell", "lhaskell", "cabal" },
-			settings = {
-				haskell = {
-					cabalFormattingProvider = "cabalfmt",
-					formattingProvider = "ormolu",
-				},
-			},
-		})
-
-		lspconfig.denols.setup({
+		-- lspconfig.hls.setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- 	cmd = { "haskell-language-server-wrapper", "--lsp" },
+		-- 	filetypes = { "haskell", "lhaskell", "cabal" },
+		-- 	settings = {
+		-- 		haskell = {
+		-- 			cabalFormattingProvider = "cabalfmt",
+		-- 			formattingProvider = "ormolu",
+		-- 		},
+		-- 	},
+		-- })
+	
+        lspconfig.denols.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			cmd = {
